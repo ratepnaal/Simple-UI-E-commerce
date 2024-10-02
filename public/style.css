@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98px 7.46px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 100px;
+}
+
+section {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-logo {
+    max-width: 600px;
+    align-self: center;
+}
+
+.hero-header {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* محاذاة الصور والنصوص في نفس السطر */
+.cards-container {
+    display: flex;
+    justify-content: center; /* لتوسيط الصور */
+    align-items: flex-start;
+    flex-wrap: nowrap; /* لمنع التفاف العناصر */
+    gap: 20px; /* مسافة بين البطاقات */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* لتوسيط الحاوية في الصفحة */
+    overflow-x: auto; /* للسماح بالتمرير الأفقي عند الحاجة */
+}
+
+/* تحسين تصميم البطاقة */
+.card {
+    width: 180px; /* عرض ثابت للبطاقة */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden; /* لمنع تجاوز المحتوى حدود البطاقة */
+    background-color: white;
+    text-align: left;
+}
+
+/* ضبط حجم الصور ليكون متساويًا */
+.card-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover; /* الحفاظ على نسبة الصورة */
+}
+
+/* الشارات (ONLINE/SOLD OUT) */
+.card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: normal; /* تأكد من أن النص غير مائل */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* محاذاة النص والنجوم */
+.stats-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-star {
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+}
+
+.gray {
+    color: gray;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* التعديل لوضع الجوال */
+@media (max-width: 768px) {
+    .cards-container {
+        justify-content: flex-start; /* لتوسيط الصور في الجوال */
+        gap: 15px;
+        flex-wrap: nowrap; /* لمنع التفاف العناصر في الجوال */
+        overflow-x: auto; /* السماح بالتمرير الأفقي عند الحاجة */
+    }
+
+    .card {
+        width: 150px; /* تصغير عرض البطاقة في الجوال */
+    }
+
+    .card-image {
+        height: 200px; /* تصغير حجم الصورة في الجوال */
+    }
+}
+
+/* تحسين التفاعل مع الشاشات الكبيرة */
+@media (min-width: 769px) {
+    .card {
+        width: 200px; /* توسيع عرض البطاقة لسطح المكتب */
+    }
+
+    .card-image {
+        height: 250px; /* ضبط ارتفاع الصورة لسطح المكتب */
+    }
+}
+
+
+ 
